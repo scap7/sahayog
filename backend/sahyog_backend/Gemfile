@@ -60,3 +60,4 @@ gem 'devise-jwt'
 gem 'pg'
 
 gem 'pry'
+gem 'redis'

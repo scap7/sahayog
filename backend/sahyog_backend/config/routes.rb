@@ -25,6 +25,10 @@ Rails.application.routes.draw do
   }
   namespace :api do 
     namespace :v1 do
+      devise_scope :user do
+        post 'verify_otp', to: 'users/registrations#verify_otp'
+        post 'set_password', to: 'users/registrations#set_password'
+      end
     end
   end
 end
