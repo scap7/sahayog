@@ -7,7 +7,7 @@ export default function Layout({children}){
   return(
     <>
       <Header/>
-      <div className="row">
+      <div className="row" style={{flexGrow: '1'}}>
         <div className="col-md-2">
           <SideBar/>
         </div>

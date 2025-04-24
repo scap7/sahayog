@@ -1,13 +1,23 @@
 import './App.css'
-import Header from './components/header.jsx'
-import Footer from './components/footer.jsx'
-import SideBar from './components/sideBar.jsx'
 import Layout from './components/layout.jsx'
 import Signup from './components/signup.jsx'
+import Login from './components/login.jsx'
+import Home from './components/home.jsx'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 function App() {
   return (
    <Layout>
-    <Signup/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/sign_up" element={<Signup/>}/>
+        <Route path="/login" element={<Login/>}/>
+      </Routes>
+    </Router>
    </Layout>
   )
 }
